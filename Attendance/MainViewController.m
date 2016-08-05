@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  MainViewController.m
 //  Attendance
 //
 //  Created by Adam Gall on 8/4/16.
 //  Copyright © 2016 gallio. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MainViewController.h"
 
-@interface ViewController ()
+@interface MainViewController ()
 
 @end
 
-@implementation ViewController
+@implementation MainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

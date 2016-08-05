@@ -14,9 +14,9 @@
 		9C0BAE431D543C9D003222BD /* Attendance.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BAE411D543C9D003222BD /* Attendance.xcdatamodeld */; };
 		9C0BAE451D543C9D003222BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C0BAE441D543C9D003222BD /* Assets.xcassets */; };
 		9C0BAE481D543C9D003222BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C0BAE461D543C9D003222BD /* LaunchScreen.storyboard */; };
+		9C8B16111D5440A70065439B /* NewAttendeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8B16101D5440A70065439B /* NewAttendeeViewController.m */; };
 		9C8B161C1D5442770065439B /* Attendee+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8B16191D5442770065439B /* Attendee+CoreDataProperties.m */; };
 		9C8B161D1D5442770065439B /* Attendee.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8B161B1D5442770065439B /* Attendee.m */; };
-		9C8B16111D5440A70065439B /* NewAttendeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8B16101D5440A70065439B /* NewAttendeeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,12 +31,12 @@
 		9C0BAE441D543C9D003222BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C0BAE471D543C9D003222BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C0BAE491D543C9D003222BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C8B160F1D5440A70065439B /* NewAttendeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewAttendeeViewController.h; sourceTree = "<group>"; };
+		9C8B16101D5440A70065439B /* NewAttendeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewAttendeeViewController.m; sourceTree = "<group>"; };
 		9C8B16181D5442770065439B /* Attendee+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Attendee+CoreDataProperties.h"; sourceTree = "<group>"; };
 		9C8B16191D5442770065439B /* Attendee+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Attendee+CoreDataProperties.m"; sourceTree = "<group>"; };
 		9C8B161A1D5442770065439B /* Attendee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attendee.h; sourceTree = "<group>"; };
 		9C8B161B1D5442770065439B /* Attendee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Attendee.m; sourceTree = "<group>"; };
-		9C8B160F1D5440A70065439B /* NewAttendeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewAttendeeViewController.h; sourceTree = "<group>"; };
-		9C8B16101D5440A70065439B /* NewAttendeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewAttendeeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,12 +73,12 @@
 				9C0BAE391D543C9D003222BD /* AppDelegate.m */,
 				9C0BAE3B1D543C9D003222BD /* MainViewController.h */,
 				9C0BAE3C1D543C9D003222BD /* MainViewController.m */,
+				9C8B160F1D5440A70065439B /* NewAttendeeViewController.h */,
+				9C8B16101D5440A70065439B /* NewAttendeeViewController.m */,
 				9C8B16181D5442770065439B /* Attendee+CoreDataProperties.h */,
 				9C8B16191D5442770065439B /* Attendee+CoreDataProperties.m */,
 				9C8B161A1D5442770065439B /* Attendee.h */,
 				9C8B161B1D5442770065439B /* Attendee.m */,
-				9C8B160F1D5440A70065439B /* NewAttendeeViewController.h */,
-				9C8B16101D5440A70065439B /* NewAttendeeViewController.m */,
 				9C0BAE3E1D543C9D003222BD /* Main.storyboard */,
 				9C0BAE441D543C9D003222BD /* Assets.xcassets */,
 				9C0BAE461D543C9D003222BD /* LaunchScreen.storyboard */,

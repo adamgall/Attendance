@@ -14,6 +14,8 @@
 		9C0BAE431D543C9D003222BD /* Attendance.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BAE411D543C9D003222BD /* Attendance.xcdatamodeld */; };
 		9C0BAE451D543C9D003222BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C0BAE441D543C9D003222BD /* Assets.xcassets */; };
 		9C0BAE481D543C9D003222BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C0BAE461D543C9D003222BD /* LaunchScreen.storyboard */; };
+		9C8B161C1D5442770065439B /* Attendee+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8B16191D5442770065439B /* Attendee+CoreDataProperties.m */; };
+		9C8B161D1D5442770065439B /* Attendee.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8B161B1D5442770065439B /* Attendee.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,10 @@
 		9C0BAE441D543C9D003222BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C0BAE471D543C9D003222BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C0BAE491D543C9D003222BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C8B16181D5442770065439B /* Attendee+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Attendee+CoreDataProperties.h"; sourceTree = "<group>"; };
+		9C8B16191D5442770065439B /* Attendee+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Attendee+CoreDataProperties.m"; sourceTree = "<group>"; };
+		9C8B161A1D5442770065439B /* Attendee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attendee.h; sourceTree = "<group>"; };
+		9C8B161B1D5442770065439B /* Attendee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Attendee.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,10 @@
 				9C0BAE391D543C9D003222BD /* AppDelegate.m */,
 				9C0BAE3B1D543C9D003222BD /* MainViewController.h */,
 				9C0BAE3C1D543C9D003222BD /* MainViewController.m */,
+				9C8B16181D5442770065439B /* Attendee+CoreDataProperties.h */,
+				9C8B16191D5442770065439B /* Attendee+CoreDataProperties.m */,
+				9C8B161A1D5442770065439B /* Attendee.h */,
+				9C8B161B1D5442770065439B /* Attendee.m */,
 				9C0BAE3E1D543C9D003222BD /* Main.storyboard */,
 				9C0BAE441D543C9D003222BD /* Assets.xcassets */,
 				9C0BAE461D543C9D003222BD /* LaunchScreen.storyboard */,
@@ -152,7 +162,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C8B161C1D5442770065439B /* Attendee+CoreDataProperties.m in Sources */,
 				9C0BAE3D1D543C9D003222BD /* MainViewController.m in Sources */,
+				9C8B161D1D5442770065439B /* Attendee.m in Sources */,
 				9C0BAE3A1D543C9D003222BD /* AppDelegate.m in Sources */,
 				9C0BAE431D543C9D003222BD /* Attendance.xcdatamodeld in Sources */,
 				9C0BAE371D543C9C003222BD /* main.m in Sources */,

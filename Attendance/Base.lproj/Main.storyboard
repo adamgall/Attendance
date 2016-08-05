@@ -60,7 +60,7 @@
         <!--New Attendee-->
         <scene sceneID="m5Y-UB-U9s">
             <objects>
-                <viewController id="2ke-b9-hAh" sceneMemberID="viewController">
+                <viewController id="2ke-b9-hAh" customClass="NewAttendeeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="b3t-De-kIL"/>
                         <viewControllerLayoutGuide type="bottom" id="qtE-Rf-pDB"/>
@@ -138,6 +138,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Attendee" id="J3d-Us-Jje"/>
+                    <connections>
+                        <outlet property="email" destination="vQT-0v-CKf" id="wlY-C7-du0"/>
+                        <outlet property="error" destination="VwG-kM-tRI" id="UCN-xS-vBH"/>
+                        <outlet property="name" destination="BJo-qn-dRp" id="m0E-uu-Z6l"/>
+                        <outlet property="phone" destination="V8n-rB-GLN" id="PBo-32-U4Y"/>
+                        <outlet property="submit" destination="y5q-zY-6VC" id="Oov-4d-1dV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RFB-Ae-9hg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

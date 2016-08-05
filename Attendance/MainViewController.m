@@ -26,6 +26,10 @@
     [self refreshAttendees];
 }
 
+- (IBAction)didTapExport:(id)sender {
+    NSData *exportFileData = [self createExport];
+}
+
 - (void)refreshAttendees {
     self.allAttendees = [self fetchAllAttendees];
     self.savedAttendees.text = [NSString stringWithFormat:@"%ld Saved Attendees", (long)self.allAttendees.count];
@@ -36,6 +40,22 @@
     NSManagedObjectContext *managedObjectContext = [appDelegate managedObjectContext];
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Attendee"];
     return [managedObjectContext executeFetchRequest:request error:nil];
+}
+
+- (NSData *)createExport {
+    NSMutableString *writeString = [[NSMutableString alloc] init];
+    
+    [writeString appendString:@"Name, Email, Phone\n"];
+    for (Attendee *attendee in self.allAttendees) {
+        [writeString appendString:[NSString stringWithFormat:@"%@, %@, %@\n", attendee.name, attendee.email, attendee.phone]];
+    }
+    
+    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"export.csv"];
+    
+    [writeString writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    
+    return [NSData dataWithContentsOfFile:filePath];
 }
 
 @end

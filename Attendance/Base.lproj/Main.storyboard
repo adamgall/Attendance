@@ -29,6 +29,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyh-7O-kUR">
                                 <rect key="frame" x="20" y="550" width="119" height="30"/>
                                 <state key="normal" title="Export Attendees"/>
+                                <connections>
+                                    <action selector="didTapExport:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4wo-oD-odp"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# Saved Attendees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mg4-bm-Z6W">
                                 <rect key="frame" x="435" y="554" width="145" height="21"/>

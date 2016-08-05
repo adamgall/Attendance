@@ -9,8 +9,9 @@
 #import "AppDelegate.h"
 #import "Attendee.h"
 #import "MainViewController.h"
+#import <MessageUI/MessageUI.h>
 
-@interface MainViewController ()
+@interface MainViewController () <MFMailComposeViewControllerDelegate>
 
 @property (nonatomic, strong) IBOutlet UIButton *export;
 @property (nonatomic, strong) IBOutlet UILabel *savedAttendees;
@@ -28,6 +29,7 @@
 
 - (IBAction)didTapExport:(id)sender {
     NSData *exportFileData = [self createExport];
+    [self showEmail:exportFileData];
 }
 
 - (void)refreshAttendees {
@@ -56,6 +58,26 @@
     [writeString writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
     
     return [NSData dataWithContentsOfFile:filePath];
+}
+
+- (void)showEmail:(NSData *)fileData {
+    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+    mc.mailComposeDelegate = self;
+    [mc setSubject:@"Wow Much Attendees!"];
+    [mc setMessageBody:@"Much Lists" isHTML:NO];
+    [mc addAttachmentData:fileData mimeType:@"text/csv" fileName:@"attendees.csv"];
+    [self presentViewController:mc animated:YES completion:nil];
+}
+
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    switch (result) {
+        case MFMailComposeResultCancelled: NSLog(@"Mail cancelled"); break;
+        case MFMailComposeResultSaved: NSLog(@"Mail saved"); break;
+        case MFMailComposeResultSent: NSLog(@"Mail sent"); break;
+        case MFMailComposeResultFailed: NSLog(@"Mail sent failure: %@", [error localizedDescription]); break;
+        default: break;
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

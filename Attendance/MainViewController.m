@@ -77,7 +77,34 @@
         case MFMailComposeResultFailed: NSLog(@"Mail sent failure: %@", [error localizedDescription]); break;
         default: break;
     }
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:^{
+        if (result == MFMailComposeResultSent) {
+            [self maybeDeleteAttendees];
+        }
+    }];
+}
+
+- (void)maybeDeleteAttendees {
+    UIAlertController *alert = [[UIAlertController alloc] init];
+    alert.title = @"Delete Exported Attendees?";
+    alert.message = @"Would you like to delete the attendees that were just exported?";
+    UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"NO" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"YES" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        [self yeahDeleteAttendees];
+    }];
+    [alert addAction:noAction];
+    [alert addAction:yesAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)yeahDeleteAttendees {
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *managedObjectContext = [appDelegate managedObjectContext];
+    for (Attendee *attendee in self.allAttendees) {
+        [managedObjectContext deleteObject:attendee];
+    }
+    [managedObjectContext save:nil];
+    [self refreshAttendees];
 }
 
 @end

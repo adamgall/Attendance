@@ -48,6 +48,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Attendance" id="PxZ-Ff-rbW"/>
+                    <connections>
+                        <outlet property="export" destination="gyh-7O-kUR" id="bqc-as-7Ru"/>
+                        <outlet property="savedAttendees" destination="mg4-bm-Z6W" id="ewa-AJ-5CX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
